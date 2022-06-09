@@ -33,6 +33,7 @@ test ex01
 expect "-r--r-xr-x 1 XX XX 40 Jun 1 23:42 testShell00"
 tar -pxf ./ex01/testShell00.tar -c ./ex01
 ls -l ./ex01
+ls -l
 
 test ex02
 echo "drwx--xr-x 2 XX XX XX Jun 1 20:47 test0
@@ -45,6 +46,7 @@ lrwxrwxrwx 1 XX XX 5 Jun 1 22:20 test6 -> test0"
 echo "**************************************************"
 tar -pxf ./ex02/exo2.tar -c ./ex02
 ls -l ./ex02
+ls -l
 
 test ex03
 expect ssh

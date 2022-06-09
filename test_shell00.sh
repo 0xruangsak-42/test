@@ -15,15 +15,15 @@ expect()
     echo $expected
     echo result
 }
-# test clean
-# rm ./ex01/testShell00
-# rm -d ./ex02/test0
-# rm ./ex02/test1
-# rm -d ./ex02/test2
-# rm ./ex02/test3
-# rm ./ex02/test4
-# rm ./ex02/test5
-# rm ./ex02/test6
+test clean
+rm ./ex01/testShell00
+rm -d ./ex02/test0
+rm ./ex02/test1
+rm -d ./ex02/test2
+rm ./ex02/test3
+rm ./ex02/test4
+rm ./ex02/test5
+rm ./ex02/test6
 
 test ex00
 expect "Z"
@@ -31,8 +31,7 @@ cat ./ex00/z
 
 test ex01
 expect "-r--r-xr-x 1 XX XX 40 Jun 1 23:42 testShell00"
-# rm ./ex01/testShell00
-tar -pxvf ./ex01/testShell00.tar
+tar -pxf ./ex01/testShell00.tar
 ls -l ./ex01
 
 test ex02
@@ -44,7 +43,7 @@ dr-x---r-- 2 XX XX XX Jun 1 22:45 test2
 -r-----r-- 2 XX XX 1 Jun 1 23:44 test5
 lrwxrwxrwx 1 XX XX 5 Jun 1 22:20 test6 -> test0"
 echo "**************************************************"
-tar -pxvf ./ex02/exo2.tar
+tar -pxf ./ex02/exo2.tar
 ls -l ./ex02
 
 test ex03

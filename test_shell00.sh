@@ -16,14 +16,14 @@ expect()
     echo result
 }
 test clean
-# rm ./ex01/testShell00
-# rm -d ./ex02/test0
-# rm ./ex02/test1
-# rm -d ./ex02/test2
-# rm ./ex02/test3
-# rm ./ex02/test4
-# rm ./ex02/test5
-# rm ./ex02/test6
+rm ./ex01/testShell00
+rm -d ./ex02/test0
+rm ./ex02/test1
+rm -d ./ex02/test2
+rm ./ex02/test3
+rm ./ex02/test4
+rm ./ex02/test5
+rm ./ex02/test6
 
 test ex00
 expect "Z"
@@ -31,7 +31,7 @@ cat ./ex00/z
 
 test ex01
 expect "-r--r-xr-x 1 XX XX 40 Jun 1 23:42 testShell00"
-tar -pxf ./ex01/testShell00.tar
+tar -pxf ./ex01/testShell00.tar ./ex01
 ls -l ./ex01
 
 test ex02
@@ -43,7 +43,7 @@ dr-x---r-- 2 XX XX XX Jun 1 22:45 test2
 -r-----r-- 2 XX XX 1 Jun 1 23:44 test5
 lrwxrwxrwx 1 XX XX 5 Jun 1 22:20 test6 -> test0"
 echo "**************************************************"
-tar -pxf ./ex02/exo2.tar
+tar -pxf ./ex02/exo2.tar ./ex02
 ls -l ./ex02
 
 test ex03
@@ -64,8 +64,8 @@ bash ./ex05/git_commit.sh | cat -e
 test ex06
 expect "lists all the existing files
 ignored by your GiT repository"
-touch ./ex06/.ignorethis
-echo ".ignorethis" > ./ex06/.gitignore
+touch ignorethis
+echo "ignorethis" > .gitignore
 bash ./ex06/git_ignore.sh | cat -e ./ex06
 
 test ex07

@@ -31,7 +31,7 @@ cat ./ex00/z
 
 test ex01
 expect "-r--r-xr-x 1 XX XX 40 Jun 1 23:42 testShell00"
-tar -pxf ./ex01/testShell00.tar ./ex01
+tar -pxf ./ex01/testShell00.tar -c ./ex01
 ls -l ./ex01
 
 test ex02
@@ -43,7 +43,7 @@ dr-x---r-- 2 XX XX XX Jun 1 22:45 test2
 -r-----r-- 2 XX XX 1 Jun 1 23:44 test5
 lrwxrwxrwx 1 XX XX 5 Jun 1 22:20 test6 -> test0"
 echo "**************************************************"
-tar -pxf ./ex02/exo2.tar ./ex02
+tar -pxf ./ex02/exo2.tar -c ./ex02
 ls -l ./ex02
 
 test ex03

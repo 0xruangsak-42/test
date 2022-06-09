@@ -64,8 +64,8 @@ bash ./ex05/git_commit.sh | cat -e
 test ex06
 expect "lists all the existing files
 ignored by your GiT repository"
-touch 1234567890
-echo "1234567890" > .gitignore
+touch ignoreme
+echo "ignoreme" > .gitignore
 bash ./ex06/git_ignore.sh | cat -e 
 
 test ex07
